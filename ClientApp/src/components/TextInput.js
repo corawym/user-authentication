@@ -1,4 +1,5 @@
 import React from 'react';
+import './components.css';
 
 const TextInput = (props) => {
     return (
@@ -8,9 +9,9 @@ const TextInput = (props) => {
             value={props.value}
             placeholder={props.placeholder} 
             onChange={props.handleChange}
+            className="textInput"
         /> 
     );
 }
 
 export default TextInput;
-

@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
-import LoginForm from './components/LoginForm';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+
+import LoginForm from './components/LoginForm';
 import * as UserActions from '../../actions/UserActions';
+import './styles.css';
 
 
 class LoginPage extends Component {
@@ -12,7 +14,6 @@ class LoginPage extends Component {
         this.state = {
             usernameValue: "",
             passwordValue: "",
-
         };
     }
 
@@ -40,15 +41,25 @@ class LoginPage extends Component {
             )
         }
         return (
-            <div>
-                <h1>Login</h1>
-                <LoginForm
-                    usernameValue={this.state.usernameValue}
-                    passwordValue={this.state.passwordValue}
-                    handleChange={this.handleChange}
-                    handleSumbit={this.handleSumbit}
-                />
-                { this.props.user.error && <p>{this.props.user.error}</p> }
+            <div className="loginPage">
+                <div className="container">
+                    <div className="row ">
+                        <h1 className="pageTitle">Login</h1>
+                        <div className="underBorder"></div>
+                        <p className="bodyText">For User login (by default, username is admin, password: 123)</p>
+                    </div>
+                </div>
+                <div className="container">
+                    <div className="row">
+                        <LoginForm
+                            usernameValue={this.state.usernameValue}
+                            passwordValue={this.state.passwordValue}
+                            handleChange={this.handleChange}
+                            handleSumbit={this.handleSumbit}
+                        />
+                        { this.props.user.error && <p className="errorMessage">{this.props.user.error}</p> }
+                    </div>
+                </div>
             </div>
         );
     }

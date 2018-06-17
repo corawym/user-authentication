@@ -11,7 +11,4 @@ export default () => (
       <PrivateRoute path='/' component={HomePage} />
     </Switch>
   </Router>
-  // <div>
-  // </div>
-  // <LoginPage />
 );

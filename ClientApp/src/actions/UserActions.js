@@ -1,9 +1,10 @@
-import * as userProviders from '../providers/userProviders';
+// import * as userProviders from '../providers/userProviders';
 
 export const userActionType = {
     loginRequest: 'LOGIN_REQUEST',
     loginSuccess : 'LOGIN_SUCCESS',
     loginError: 'LOGIN_ERROR',
+
     logout: 'LOGOUT'
 }
 

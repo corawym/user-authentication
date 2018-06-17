@@ -2,11 +2,13 @@
 import thunk from 'redux-thunk';
 import { routerReducer, routerMiddleware } from 'react-router-redux';
 import { userReducer } from './Reducers/UserReducer';
+import { homeReducer } from './Reducers/HomeReducer';
 
 
 export default function configureStore(history, initialState) {
   const reducers = {
     user: userReducer,
+    home: homeReducer
   };
 
   const middleware = [
