@@ -2,6 +2,10 @@
     text-align: right;
 }
 
+.userInfo .username {
+    text-transform: capitalize;
+}
+
 .userInfo .button {
     color: #444;
     background: white;
