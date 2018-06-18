@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux'; 
 import { bindActionCreators } from 'redux';
 
@@ -93,5 +94,10 @@ function mapDispatchToProps(dispatch) {
         homeActions: bindActionCreators(HomeActions, dispatch)
     }
 } 
+
+HomePage.propTypes = {
+    username: PropTypes.string,
+    error: PropTypes.string
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(HomePage);

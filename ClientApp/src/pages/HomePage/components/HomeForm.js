@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import TextInput from '../../../components/TextInput';
 import Button from '../../../components/Button';
 
@@ -8,5 +9,11 @@ const HomeForm = (props) => (
         <Button type="sumbit">Submit</Button>
     </form>
 );
+
+HomeForm.propTypes = {
+    homeFormValue: PropTypes.string,
+    onSubmit: PropTypes.func,
+    handleChange: PropTypes.func
+};
 
 export default HomeForm;

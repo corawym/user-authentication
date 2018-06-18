@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -76,5 +77,9 @@ function mapDispatchToProps(dispatch) {
         userActions: bindActionCreators(UserActions, dispatch)
     }
 }
+
+LoginPage.propTypes = {
+    error: PropTypes.string
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(LoginPage);
